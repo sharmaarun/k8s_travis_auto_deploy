@@ -1,0 +1,7 @@
+travis-deployer-sincere-hybrid-224616-c147a8e8461e.json
+.DS_Store
+node_modules/
+coverage/
+npm-debug.log
+stats.json
+yarn-error.log
