@@ -29,13 +29,13 @@ app.get("/", (req, res) => {
                 visits: 1
             });
             visits.save(() => {
-                res.send("v1 First Run" + JSON.stringify(visits));
+                res.send("v2 First Run" + JSON.stringify(visits));
                 return;
             });
         } else {
             visits.visits += 1;
             visits.save(() => {
-                res.send("v1 Rerun" + JSON.stringify(visits));
+                res.send("v2 Rerun" + JSON.stringify(visits));
                 return;
             });
         }
