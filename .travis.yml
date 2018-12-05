@@ -15,7 +15,7 @@ before_install:
   - gcloud config set compute/zone us-central1-a
   - gcloud container clusters get-credentials standard-cluster-1
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
-  - docker build -t sharmaarun/ci_cd_test -f ./moleculer-test/Dockerfile.dev
+  - docker build -t sharmaarun/ci_cd_test -f ./moleculer-test/Dockerfile.dev ./moleculer-test
 
 script:
   - docker run sharmaarun/ci_cd_test npm run test
