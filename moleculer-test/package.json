@@ -1,0 +1,58 @@
+{
+  "name": "april_smith",
+  "version": "0.1.0",
+  "description": "test-molecule",
+  "main": "index.js",
+  "scripts": {
+    
+    "start": "nodemon src/gui/index.js",
+    "start-legacy": "nodemon --legacy-watch src/gui/index.js",
+    "dev": "nodemon examples/index.js",
+    "ci": "jest --watch",
+    "test": "jest --coverage",
+    "lint": "eslint --ext=.js src test",
+    "deps": "npm-check -u",
+    "coverall": "cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js"
+  },
+  "keywords": [
+    "moleculer",
+    "microservice"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sharmaarun/april_smith.git"
+  },
+  "author": "Arun",
+  "license": "MIT",
+  "peerDependencies": {
+    "moleculer": "^0.13.0"
+  },
+  "devDependencies": {
+    "benchmarkify": "2.1.0",
+    "coveralls": "3.0.0",
+    "eslint": "4.18.2",
+    "jest": "22.4.2",
+    "jest-cli": "22.4.2",
+    "moleculer": "^0.13.0",
+    "nodemon": "1.17.1",
+    "npm-check": "5.5.2"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "rootDir": "./src",
+    "roots": [
+      "../test"
+    ],
+    "coveragePathIgnorePatterns": [
+      "/node_modules/",
+      "/test/services/"
+    ]
+  },
+  "engines": {
+    "node": ">= 6.x.x"
+  },
+  "dependencies": {
+    "express": "^4.16.4",
+    "mongoose": "^5.3.14"
+  }
+}
